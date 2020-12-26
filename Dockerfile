@@ -5,7 +5,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:3.1 AS build
 WORKDIR /src
 COPY ["DockerComposeLab.csproj", "./"]
-RUN dotnet restore "DockerComposeLab.csproj" --disable-parallel
+RUN dotnet restore "DockerComposeLab.csproj"
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "DockerComposeLab.csproj" -c Release -o /app/build
