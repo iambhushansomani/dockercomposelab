@@ -41,7 +41,7 @@ namespace DockerComposeLab.Controllers
         }
 
 
-        [HttpGet("findall")]
+        [HttpGet("ListBands")]
         public IEnumerable<FavoriteBand> GetList()
         {
             try
